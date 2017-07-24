@@ -16,4 +16,4 @@ jobs:
     trigger: true
   - get: configuration-resource
   - task: hello-world
-    file: tasks/hello.yml
+    file: configuration-resource/tasks/hello.yml
