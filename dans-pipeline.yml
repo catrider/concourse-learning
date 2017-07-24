@@ -1,0 +1,19 @@
+resources:
+  - name: 1m
+    type: time
+    source: { interval: 1m }
+
+  - name: configuration-resource
+    type: git
+    source:
+      uri: git@github.com:catrider/concourse-learning.git
+      branch: master
+
+jobs:
+- name: something-every-1m
+  plan:
+  - get: 1m
+    trigger: true
+  - get: configuration-resource
+  - task: hello-world
+    file: tasks/hello.yml
