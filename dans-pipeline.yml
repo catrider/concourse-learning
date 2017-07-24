@@ -6,7 +6,7 @@ resources:
   - name: configuration-resource
     type: git
     source:
-      uri: git@github.com:catrider/concourse-learning.git
+      uri: https://github.com/catrider/concourse-learning.git
       branch: master
 
 jobs:
